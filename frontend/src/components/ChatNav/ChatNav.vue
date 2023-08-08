@@ -245,21 +245,6 @@ const saveSetting = () => {
         <div class="text-3xl py-2">设置</div>
       </template>
       <NForm ref="formRef" label-placement="left" label-width="auto" require-mark-placement="right-hanging" style="margin-top: 16px;">
-        <NFormItem path="cookiesEnable" label="完整 Cookie">
-          <NSwitch v-model:value="cookiesEnable" />
-        </NFormItem>
-        <NFormItem v-show="!cookiesEnable" path="token" label="Token">
-          <NInput size="large" v-model:value="userToken" type="text" placeholder="用户 Cookie ,仅需要 _U 的值" />
-        </NFormItem>
-        <NFormItem v-show="!cookiesEnable" path="token" label="KievRPSSecAuth">
-          <NInput size="large" v-model:value="userKievRPSSecAuth" type="text" placeholder="用户 Cookie ,仅需要 KievRPSSecAuth 的值" />
-        </NFormItem>
-        <NFormItem v-show="!cookiesEnable" path="token" label="_RwBf">
-          <NInput size="large" v-model:value="userRwBf" type="text" placeholder="用户 Cookie ,仅需要 _RwBf 的值" />
-        </NFormItem>
-        <NFormItem v-show="cookiesEnable" path="token" label="Cookies">
-          <NInput size="large" v-model:value="cookies" type="text" placeholder="完整用户 Cookie" />
-        </NFormItem>
         <NFormItem path="history" label="历史记录">
           <NSwitch v-model:value="history" />
         </NFormItem>
@@ -291,15 +276,6 @@ const saveSetting = () => {
         </NFormItem>
         <NFormItem path="" label="最新版本">
           <NTag type="info" size="small" round>{{ lastVersion }}</NTag>
-        </NFormItem>
-        <NFormItem path="token" label="开源地址">
-          <NButton text tag="a" href="https://github.com/Harry-zklcdc/go-proxy-bingai" target="_blank" type="success">Harry-zklcdc/go-proxy-bingai</NButton>
-        </NFormItem>
-        <NFormItem path="token" label="原作者">
-          <NButton text tag="a" href="https://github.com/adams549659584" target="_blank" type="success">adams549659584</NButton>
-        </NFormItem>
-        <NFormItem path="token" label="原开源地址">
-          <NButton text tag="a" href="https://github.com/adams549659584/go-proxy-bingai" target="_blank" type="success">adams549659584/go-proxy-bingai</NButton>
         </NFormItem>
       </NForm>
       <template #action>
